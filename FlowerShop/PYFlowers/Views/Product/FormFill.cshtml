@@ -1,0 +1,89 @@
+﻿@model PYFlowers.Models.Product
+@{
+Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet"
+        asp-href-include="/lib/bootstrap/dist/**/*.min.css"
+        asp-href-exclude="**/*-reboot*,**/*-grid*" />
+<title>Flower Shop</title>
+<link href="~/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="width:980px; margin-left:auto; margin-right:auto;">
+        <div id="allPage">
+            <div style="margin-top:50px">
+                <div class="panel panel-success">
+                    <div class="panel-heading text-center">
+                        <h1>Product Application</h1>
+                    </div>
+                    <div class="panel-body">
+                        <form class="p-a-1" asp-action="FormFill" method="post">
+                            <div asp-validation-summary="All"></div>
+                            <div class="form-group">
+                                <label asp-for="Name">Flower Name:</label>
+                                <input class="form-control" asp-for="Name" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Season</label>
+                                <select class="form-control" asp-for="Category">
+                                    <option value="">Choose an option</option>
+                                    <option value="Spring">Spring</option>
+                                    <option value="Summer">Summer</option>
+                                    <option value="Winter">Winter</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Price">Price: </label>
+                                <input class="form-control" asp-for="Price" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Stock">Stock: </label>
+                                <input class="form-control" asp-for="Stock" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Wrap Available?</label>
+                                <select class="form-control" asp-for="Wrap">
+                                    <option value="">Choose an option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Gift Available?</label>
+                                <select class="form-control" asp-for="Gift">
+                                    <option value="">Choose an option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="False">No</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Description">Description: </label>
+                                <textarea class="form-control" asp-for="Description"
+                                          placeholder="Please provide short description in this box">
+                                </textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button class="btn btn-primary" type="submit">
+                                    Register
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

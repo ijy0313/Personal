@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet"
+          asp-href-include="/lib/bootstrap/dist/**/*.min.css"
+          asp-href-exclude="**/*-reboot*,**/*-grid*" />
+    <title>Flower Shop</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div style="width:980px; margin-left:auto; margin-right:auto;">
+            <div class="navbar navbar-inverse bg-inverse" role="navigation">
+                <a class="navbar-brand" href="#"><h1>Flower Shop</h1></a>
+                <div class="right">
+                    <div class="text-right">
+                        <a asp-action="Index">Home Page</a> |
+                        <a asp-action="List">Flowers</a> |
+                        <a asp-action="FormFill">Register Your Product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width:980px; margin-left:auto; margin-right:auto;">
+        </div>
+    </header>
+        @RenderBody()
+</body>
+</html>
